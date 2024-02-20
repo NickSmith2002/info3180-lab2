@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block main%}
+<link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}">
+
+<div id="Container">
+
+    <div id="tophalf">
+        <img src="{{url_for('static', filename='images/profile.png')}}" alt="User's Profile Picture">
+        <h4 id="name">Nicholas Smith</h4>
+        <p>@nsmith <br> Kingston, Jamaica <br> Joined {{date}} <br></p>
+    </div>
+
+    <div id="bottomhalf">
+        <p id="bio">I am a third-year Computer Science student who is interested in Web Development and loves watching movies. I
+            have an interest in film and social media, and hope to combine my computing skills with these interests.
+        </p>
+        <div id="data">
+            <section class="profiledata">
+                <h5>159</h5>
+                <p>Posts</p>
+            </section>
+            <section class="profiledata">
+                <h5>300</h5>
+                <p>Following</p>
+            </section>
+            <section class="profiledata">
+                <h5>765</h5>
+                <p>Followers</p>
+            </section>
+        </div>
+        <button type="button" id="followbtn" name="flwbutton">Follow</button>
+    </div>
+
+</div>
+{% endblock %}
